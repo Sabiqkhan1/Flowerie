@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../components/Banner'
@@ -7,11 +8,15 @@ import MediumCard from '../components/MediumCard'
 import styles from '../styles/Home.module.css'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
-
+ import { ParallaxProvider } from "react-scroll-parallax";
+import Modal from '../components/signup'
 
 export default function Home({ exploreData, cardsData }) {
+    const [_switchtheme,_setswitchtheme]=React.useState(false)
+    const [_show,_setshow]=React.useState(false)
   return (
-    <div className="">
+    <ParallaxProvider>
+    <div className={`${_switchtheme?"night-theme":"day-theme"}`}>
 
 
       <Head>
@@ -21,8 +26,8 @@ export default function Home({ exploreData, cardsData }) {
       </Head>
 
       {/* Header  */}
-      <Header />
-      {/* Banner */}
+      <Header  _setswitchtheme={_setswitchtheme} _switchtheme={_switchtheme}/>
+       {/* Banner */}
       <Banner />
       {/* Main*/}
       <main className="max-w-7xl mx-auto px-8 sm:px-16" >
@@ -61,6 +66,7 @@ export default function Home({ exploreData, cardsData }) {
 
       <Footer />
     </div>
+     </ParallaxProvider>
   )
 }
 

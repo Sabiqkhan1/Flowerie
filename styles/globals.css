@@ -26,3 +26,118 @@ a {
    active:bg-gray-100 transition transform duration-100 ease-out
   }
 }
+
+
+.paralex-header
+{
+  position: relative;
+  top:115px;
+  animation-name: bottomtotop;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+.paralex-header-1
+{
+  position: relative;
+  top: 0px;
+  animation-name: toptobottom;
+  animation-duration:0.25s;
+  animation-fill-mode: forwards;
+}
+.cst-fd{
+  top: 115px;
+  position: relative;
+  z-index: 1111;
+}
+
+@keyframes one_hide {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes bottomtotop {
+  from {
+    top: 115px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes toptobottom {
+  from {
+    top: 0px;
+  }
+  100% {
+    top: 115px;
+  }
+}
+
+.dsp-none
+{
+  display: none;
+}
+.night-theme button,.night-theme h3,.night-theme h2,.night-theme h1,.night-theme h4,.night-theme h5,.night-theme p,.night-theme a{
+color: white;
+}
+.night-theme .design-card h3,.night-theme .design-card p,.night-theme .design-card h2{
+color: #343434;
+}
+.night-theme .sm-card-cst{
+background-color: white;
+}
+.night-theme svg{
+fill: white;
+}
+.night-theme #header,.night-theme,.night-theme #footer,.night-theme button,.night-theme .drp-menu{
+background-color: #343434;
+ }
+ .night-theme .drp-menu .item:hover{
+    color:#343434 ;
+    background-color: #8b8b8b;
+
+ }
+.pos-rel{
+  position:relative
+}
+.drp-menu .item:hover{
+  background-color: rgb(241, 241, 241);
+  min-width: 100%;
+}
+.drp-menu .item{
+margin: 3px 0px;
+min-width: 100%;
+padding: 5px 5px;
+cursor: pointer;
+
+}
+.drp-menu{
+  position: absolute;
+  z-index: 2000;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  min-width: 200px;
+   border-radius: 10px;
+  padding: 20px;
+ }
+.c-p{
+  cursor: pointer;
+}
+
+.modal-log-sign{
+ width: 100%;  
+}
+.ReactModal__Overlay{
+  z-index: 111111;
+}
+.modal-log-sign h5{
+text-align: center;
+width: 100%;
+font-weight: 600;
+}
